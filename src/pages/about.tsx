@@ -49,7 +49,7 @@ const About: NextPage = () => {
 
             <div className=" h-screen container flex p-2 mx-auto">
 
-                <div className="block relative text-center m-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:fixed lg:left-[10%] lg:top-[35%] lg:p-16 lg:mx-20 lg:text-2xl">
+                <div className="block relative left-[20%] bottom-[20%] lg:bottom-[35%] text-center m-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:fixed lg:left-[10%] lg:top-[35%] lg:p-16 lg:mx-20 lg:text-2xl">
                     <div className='lg:text-start'>
 
                         <p>I'm <b> Azka Rafif Zaydan </b></p>
@@ -62,7 +62,7 @@ const About: NextPage = () => {
                         <p className='pr-2'>and</p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="react logo" className='w-6 mr-1 md:w-8 lg:w-10' /> <p> for Front-End</p>
                     </div>
                 </div>
-                <div className='relative hidden lg:left-[60%] lg:relative lg:block lg:self-end lg:justify-end text-center lg:my-auto mx-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:p-16 lg:mx-20 lg:text-2xl'>
+                <div className='relative block  m-auto right-[30%] top-[20%] lg:right-0 lg:top-0 lg:left-[60%] lg:relative lg:block lg:self-end lg:justify-end text-center lg:my-auto mx-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:p-16 lg:mx-20 lg:text-2xl'>
                     <p>My Projects</p>
                     <div className='container content-center justify-center'>
                         {projs.map(v => (

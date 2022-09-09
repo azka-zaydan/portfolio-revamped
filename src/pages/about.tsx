@@ -48,33 +48,31 @@ const About: NextPage = () => {
             <Header titleName='About' />
 
             <div className=" h-screen container flex p-2 mx-auto">
-                <div className='columns-1 lg:flex lg:fixed lg:bottom-[20%] lg:right-[20%]'>
 
-                    <div className="block relative top-[20%] left-[10%] text-center m-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:fixed lg:left-[10%] lg:top-[35%] lg:p-16 lg:mx-20 lg:text-2xl">
-                        <div className='lg:text-start'>
+                <div className="block relative text-center m-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:fixed lg:left-[10%] lg:top-[35%] lg:p-16 lg:mx-20 lg:text-2xl">
+                    <div className='lg:text-start'>
 
-                            <p>I'm <b> Azka Rafif Zaydan </b></p>
-                            <p><code>Software Engineer</code> from Jakarta, Indonesia</p>
-                        </div>
-                        <div className='flex content-center justify-center md:justify-start'>
-                            <p className='pr-2'>I mainly use</p> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="python logo" className='w-6 mr-1 md:w-8 lg:w-10' /> <p> for Back-End</p>
-                        </div>
-                        <div className='flex justify-center md:justify-start'>
-                            <p className='pr-2'>and</p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="react logo" className='w-6 mr-1 md:w-8 lg:w-10' /> <p> for Front-End</p>
-                        </div>
+                        <p>I'm <b> Azka Rafif Zaydan </b></p>
+                        <p><code>Software Engineer</code> from Jakarta, Indonesia</p>
                     </div>
-                    <div className='relative my-auto top-[30%] left-[10%] lg:right-0 lg:bottom-0 lg:relative lg:block lg:self-end lg:justify-end text-center lg:my-auto mx-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:p-16 lg:mx-20 lg:text-2xl'>
-                        <p>My Projects</p>
-                        <div className='container content-center justify-center'>
-                            {projs.map(v => (
-                                <a key={v.projName} href={v.link} className='text-center content-center space-y-8'>
-                                    <div className='flex relative bg-gray-900 rounded-lg p-2 my-2 text-white transition-all hover:shadow-2xl hover:bottom-4 hover:mb-2 hover:bg-white active:border active:border-black hover:text-black lg:hover:shadow-2xl lg:hover:mb-2 lg:hover:bottom-2 lg:hover:left-2 lg:hover:bg-white lg:hover:text-black'>
-                                        {v.projName}
-                                        <img src={v.logo} alt={v.projLang} className='w-8 mx-2' />
-                                    </div>
-                                </a>
-                            ))}
-                        </div>
+                    <div className='flex content-center justify-center md:justify-start'>
+                        <p className='pr-2'>I mainly use</p> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="python logo" className='w-6 mr-1 md:w-8 lg:w-10' /> <p> for Back-End</p>
+                    </div>
+                    <div className='flex justify-center md:justify-start'>
+                        <p className='pr-2'>and</p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="react logo" className='w-6 mr-1 md:w-8 lg:w-10' /> <p> for Front-End</p>
+                    </div>
+                </div>
+                <div className='relative hidden lg:left-[60%] lg:relative lg:block lg:self-end lg:justify-end text-center lg:my-auto mx-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:p-16 lg:mx-20 lg:text-2xl'>
+                    <p>My Projects</p>
+                    <div className='container content-center justify-center'>
+                        {projs.map(v => (
+                            <a key={v.projName} href={v.link} className='text-center content-center space-y-8'>
+                                <div className='flex relative bg-gray-900 rounded-lg p-2 my-2 text-white transition-all hover:shadow-2xl hover:bottom-4 hover:mb-2 hover:bg-white active:border active:border-black hover:text-black lg:hover:shadow-2xl lg:hover:mb-2 lg:hover:bottom-2 lg:hover:left-2 lg:hover:bg-white lg:hover:text-black'>
+                                    {v.projName}
+                                    <img src={v.logo} alt={v.projLang} className='w-8 mx-2' />
+                                </div>
+                            </a>
+                        ))}
                     </div>
                 </div>
             </div>

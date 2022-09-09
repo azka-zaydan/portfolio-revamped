@@ -65,7 +65,7 @@ function Navbar() {
 
                         {links.map(v => (
                             <>
-                                <li key={v.navName} className='relative transition-all hover:right-2 hover:my-2'>
+                                <li key={v.navName} className='relative transition-all hover:right-2 hover:mt-2'>
                                     <Link href={v.navHref}>
                                         <a className='nav-icons px-3'>{v.navName}</a>
                                     </Link>

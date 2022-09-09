@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-enter {
+  opacity: 0;
+  transform: scale(1) translateX(10px);
+}
+.menu-enter-active {
+  opacity: 1;
+  transform: translate(0px);
+  transition: opacity 500ms, transform 500ms;
+}
+.menu-exit {
+  opacity: 0;
+}
+.menu-exit-active {
+  opacity: 1;
+  transform: scale(1) translateX(-10px);
+  transition: opacity 500ms, transform 500ms;
+}
+
+@layer components {
+  .nav-icons {
+    @apply cursor-pointer block py-2 rounded md:border-0 md:p-0 text-gray-400 md:hover:text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent;
+  }
+  .nav-head {
+    @apply md:flex p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-gray-900 border-gray-700;
+  }
+}

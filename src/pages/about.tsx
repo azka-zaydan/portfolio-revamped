@@ -63,10 +63,10 @@ const About: NextPage = () => {
                 </div>
                 <div className='hidden lg:block lg:self-end lg:justify-end text-center my-auto mx-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:p-16 lg:mx-20 lg:text-2xl'>
                     <p>My Projects</p>
-                    <div className='container content-center justify-center bg-[#111827]'>
+                    <div className='container content-center justify-center'>
                         {projs.map(v => (
                             <a key={v.projName} href={v.link} className='text-center content-center'>
-                                <div className='flex relative bg-[#111827] rounded-lg p-2 my-2 text-white transition-all hover:shadow-2xl hover:p-8 hover:left-4 hover:bg-white hover:text-black'>
+                                <div className='flex relative bg-gray-900 rounded-lg p-2 my-2 text-white transition-all hover:shadow-2xl hover:p-8 hover:left-4 hover:bg-white hover:text-black'>
                                     {v.projName}
                                     <img src={v.logo} alt={v.projLang} className='w-8 mx-2' />
                                 </div>

@@ -3,7 +3,6 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import Logo from '../imgs/logo.svg'
 import { CSSTransition } from 'react-transition-group';
-import NavItem from './NavItem';
 function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false)
@@ -41,7 +40,11 @@ function Navbar() {
                     <div className="hidden w-full md:block md:w-auto">
                         <ul className="nav-head">
                             {links.map(v => (
-                                <NavItem key={v.navName} navHref={v.navHref} navName={v.navName} />
+                                <li key={v.navName}>
+                                    <Link href={v.navHref}>
+                                        <a className='nav-icons'>{v.navName}</a>
+                                    </Link>
+                                </li>
                             ))}
                         </ul>
                     </div>

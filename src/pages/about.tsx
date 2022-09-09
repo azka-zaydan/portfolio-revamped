@@ -49,7 +49,7 @@ const About: NextPage = () => {
 
             <div className=" h-screen flex p-2 mx-auto">
 
-                <div className="block absolute flex-shrink-0 right-4 left-4 top-[8rem] text-center m-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl md:absolute lg:absolute lg:block lg:left-[5rem] lg:p-16 lg:mx-20 lg:text-2xl lg:right-[70rem] lg:top-[20rem]">
+                <div className="block absolute flex-shrink-0 right-4 left-4 top-[8rem] text-center m-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:relative lg:block lg:p-16 lg:mx-20 lg:text-2xl lg:right-[70rem] lg:top-10">
                     <div className='lg:text-start text-center'>
 
                         <p>I'm <b> Azka Rafif Zaydan </b></p>

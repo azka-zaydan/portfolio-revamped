@@ -12,21 +12,24 @@ function Navbar() {
     const links = [
         {
             navName: 'Home',
-            navHref: '/'
+            navHref: '/',
+            uniq: 1
         },
         {
             navName: 'About',
-            navHref: '/about'
+            navHref: '/about',
+            uniq: 2
         },
         {
             navName: 'Contact',
-            navHref: '/contact'
+            navHref: '/contact',
+            uniq: 3
         }
     ]
 
     return (
         <>
-            <nav className="md:px-2 px-4 py-2.5 bg-gray-900 fixed w-full z-auto">
+            <nav className="md:px-2 px-4 py-2.5 bg-gray-900 fixed w-full z-50">
                 <div className="transition-all ease-in-out container flex flex-wrap justify-between items-center mx-auto">
                     <Link href={'/'}>
                         <a className="space-x-2 p-2">
@@ -39,13 +42,15 @@ function Navbar() {
 
                     <div className="hidden w-full md:block md:w-auto">
                         <ul className="nav-head">
-                            {links.map(v => (
-                                <li key={v.navName}>
+                            {links.map(v =>
+                            (
+                                <li key={v.uniq}>
                                     <Link href={v.navHref}>
                                         <a className='nav-icons'>{v.navName}</a>
                                     </Link>
                                 </li>
-                            ))}
+                            )
+                            )}
                         </ul>
                     </div>
                 </div>
@@ -65,7 +70,7 @@ function Navbar() {
 
                         {links.map(v => (
                             <>
-                                <li key={v.navName} className='relative transition-all hover:right-2 hover:mt-2'>
+                                <li key={v.uniq} className='relative transition-all hover:right-2 hover:mt-2'>
                                     <Link href={v.navHref}>
                                         <a className='nav-icons px-3'>{v.navName}</a>
                                     </Link>

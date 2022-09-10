@@ -9,13 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@trpc/client": "^9.27.2",
+    "@trpc/next": "^9.27.2",
+    "@trpc/react": "^9.27.2",
+    "@trpc/server": "^9.27.2",
     "@types/react-transition-group": "^4.4.5",
+    "dotenv": "^16.0.2",
+    "mongodb": "^4.9.1",
     "next": "12.2.5",
+    "prisma": "^4.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-query": "^3.39.2",
     "react-transition-group": "^4.4.5",
-    "zod": "^3.18.0"
+    "zod": "^3.19.0"
   },
   "devDependencies": {
     "@types/node": "18.0.0",

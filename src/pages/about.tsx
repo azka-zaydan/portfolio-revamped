@@ -47,7 +47,7 @@ const About: NextPage = () => {
         <>
             <Header titleName='About' />
 
-            <div className=" h-screen flex p-2 mx-auto">
+            <div className="h-screen flex p-2 mx-auto">
 
                 <div className="block absolute flex-shrink-0 right-[4em] left-[4em] top-[8em] text-center m-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:relative lg:block lg:p-16 lg:mx-20 lg:text-2xl lg:right-[70em] lg:top-10">
                     <div className='lg:text-start text-center'>

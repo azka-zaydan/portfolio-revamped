@@ -3,9 +3,18 @@
 import { NextPage } from 'next'
 import React from 'react'
 import Header from '../components/Header'
+import ProjectCard from '../components/ProjectCard'
+
+export interface ProjProps {
+    projName: string
+    projLang: string
+    link: string
+    logo: string
+}
+
 
 const About: NextPage = () => {
-    const projs = [
+    const projs: ProjProps[] = [
         {
             projName: 'Bukalapak-Scraper',
             projLang: 'Python',
@@ -71,12 +80,13 @@ const About: NextPage = () => {
                 <div className='absolute block lg:ml-10 flex-shrink-0 right-[4em] left-[4em] top-[20em] my-auto lg:mb-4 lg:absolute lg:right-[5em] lg:left-[40em] lg:top-[8em] lg:block lg:self-end lg:text-left text-center lg:my-auto mx-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-xl lg:p-16 lg:mx-20 lg:text-2xl justify-center items-center align-middle w-max lg:justify-start'>
                     <p>My Projects</p>
                     {projs.map(v => (
-                        <a key={v.projName} href={v.link} className='flex text-center justify-center align-middle place-items-center lg:justify-start lg:text-left'>
-                            <div className='flex flex-shrink-0 w-full justify-center align-middle place-items-center relative bg-gray-900 rounded-lg p-[0.5em] my-2 text-white transition-all hover:shadow-2xl hover:bottom-4 hover:mb-2 hover:bg-white active:border active:border-black hover:text-black lg:hover:shadow-2xl lg:hover:mb-2 lg:hover:bottom-2 lg:hover:left-2 lg:hover:bg-white lg:hover:text-black lg:text-left'>
-                                {v.projName}
-                                <img src={v.logo} alt={v.projLang} className='w-8 mx-2' />
-                            </div>
-                        </a>
+                        <ProjectCard
+                            key={v.link}
+                            link={v.link}
+                            logo={v.logo}
+                            projLang={v.projLang}
+                            projName={v.projName}
+                        />
                     ))}
                 </div>
             </div>

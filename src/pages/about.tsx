@@ -59,7 +59,7 @@ const About: NextPage = () => {
 
             <Layout>
 
-                <div className="flex bg-slate-200 rounded-lg mx-2 p-2 md:p-4 lg:p-8 transition-all ease-in-out md:text-xl lg:text-2xl shadow-2xl">
+                <div className="flex md:block bg-slate-200 rounded-lg mx-2 p-2 md:p-4 lg:p-8 transition-all ease-in-out md:text-xl lg:text-2xl shadow-2xl">
                     <div className='lg:text-start text-center'>
 
                         <p>I'm <b> Azka Rafif Zaydan </b></p>

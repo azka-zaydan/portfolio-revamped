@@ -59,7 +59,7 @@ const About: NextPage = () => {
 
             <Layout>
 
-                <div className="bg-slate-200 rounded-lg p-8 transition-all ease-in-out md:text-xl lg:text-2xl shadow-2xl">
+                <div className="bg-slate-200 rounded-lg p-2 md:p-4 lg:p-8 transition-all ease-in-out md:text-xl lg:text-2xl shadow-2xl">
                     <div className='lg:text-start text-center'>
 
                         <p>I'm <b> Azka Rafif Zaydan </b></p>
@@ -75,8 +75,9 @@ const About: NextPage = () => {
                         <p>React</p>
                         <p className='ml-1'> for Front-End</p>
                     </div>
+
                 </div>
-                <div className='bg-slate-200 rounded-lg p-8 transition-all ease-in-out md:text-xl lg:text-2xl hover:bg-slate-50 hover:text-black shadow-2xl'>
+                <div className='bg-slate-200 rounded-lg p-4 lg:p-8 transition-all ease-in-out md:text-xl lg:text-2xl shadow-2xl'>
                     <p>My Projects</p>
                     {projs.map(v => (
                         <ProjectCard

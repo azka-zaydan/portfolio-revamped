@@ -4,7 +4,6 @@ import React from 'react'
 import ContactCard from '../components/ContactCard'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
-import { motion } from 'framer-motion'
 export interface ContactProps {
     name: string
     imgSource: string

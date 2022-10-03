@@ -40,12 +40,12 @@ const Contact: NextPage = () => {
             <Header titleName='Contact' />
             <Layout>
 
-                <motion.div className='grid gap-10 grid-cols-3 grid-rows-1 mx-auto my-auto bg-slate-200 p-4 rounded-lg text-center shadow-xl'
-                    initial={{ x: 300 }} animate={{ x: 0 }} >
+                <div className='grid gap-10 grid-cols-3 grid-rows-1 mx-auto my-auto bg-slate-200 p-4 rounded-lg text-center shadow-xl'
+                >
                     {socialMedia.map(v => (
                         <ContactCard key={v.href} alt={v.alt} href={v.href} imgSource={v.imgSource} name={v.name} />
                     ))}
-                </motion.div>
+                </div>
             </Layout>
         </>
     )

@@ -2,9 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import Logo from '../imgs/logo.svg'
-import { CSSTransition } from 'react-transition-group';
 import TopNavItem from './TopNavItem';
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 export interface NavItemProps {
     navName: string
     navHref: string
@@ -64,30 +63,26 @@ function Navbar() {
                 </div>
             </nav >
 
-            <AnimatePresence>
 
-                <motion.div className='md:hidden absolute w-max h-max right-[1%] top-[9%] text-center ease-in-out hover:shadow-xl transition-all z-50'
+            <motion.div className='md:hidden absolute w-max h-max right-[1%] top-[9%] text-center ease-in-out hover:shadow-xl transition-all z-50'
+                initial={{ x: 300, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -300, opacity: 0 }}>
+
+
+
+                <motion.div className={isOpen ? 'nav-head' : 'hidden'}
                     initial={{ x: 300, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: -300, opacity: 0 }}>
 
-
-                    <AnimatePresence>
-
-                        <motion.div className={isOpen ? 'nav-head' : 'hidden'}
-                            initial={{ x: 300, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            exit={{ x: -300, opacity: 0 }}>
-
-                            {links.map(v => (
-                                <TopNavItem navHref={v.navHref} navName={v.navName} key={v.uniq} />
-                            ))}
-
-                        </motion.div>
-                    </AnimatePresence>
+                    {links.map(v => (
+                        <TopNavItem navHref={v.navHref} navName={v.navName} key={v.uniq} />
+                    ))}
 
                 </motion.div>
-            </AnimatePresence>
+
+            </motion.div>
 
 
         </>

@@ -2,13 +2,18 @@
 import type { NextPage } from "next";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
-
+import { motion } from 'framer-motion'
 const Home: NextPage = () => {
   return (
     <>
       <Header titleName="Home" />
       <Layout>
-        <div className="flex lg:text-start m-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-2xl lg:p-16 lg:mx-20 lg:text-4xl">
+        <motion.div
+          className="flex lg:text-start m-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-2xl lg:p-16 lg:mx-20 lg:text-4xl"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <section>
             <h1 className="text-2xl md:text-4xl lg:text-6xl">Hi, i'm Azka</h1>
 
@@ -21,7 +26,7 @@ const Home: NextPage = () => {
             </div>
 
           </section>
-        </div>
+        </motion.div>
       </Layout>
     </>
   );

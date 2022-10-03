@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { NavItemProps } from './Navbar'
-
+import { motion } from 'framer-motion'
 interface Props {
     navHref: string
     navName: string
@@ -11,7 +10,10 @@ const TopNavItem = ({ navHref, navName }: Props) => {
     return (
         <div >
             <Link href={navHref} className='nav-icons'>
-                <a className='nav-icons'>{navName}</a>
+                <motion.button className='nav-icons'
+                    whileTap={{ scale: 0.9 }}>
+                    {navName}
+                </motion.button>
             </Link>
         </div>
     )

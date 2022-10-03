@@ -3,13 +3,22 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import Logo from '../imgs/logo.svg'
 import { CSSTransition } from 'react-transition-group';
+import ContactCard from './ContactCard';
+import TopNavItem from './TopNavItem';
+
+export interface NavItemProps {
+    navName: string
+    navHref: string
+    uniq: number
+}
+
 function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false)
     const openUp = () => setIsOpen(true)
     const closeIt = () => setIsOpen(false)
 
-    const links = [
+    const links: NavItemProps[] = [
         {
             navName: 'Home',
             navHref: '/',
@@ -41,17 +50,11 @@ function Navbar() {
                     </button>) : (<button className='absolute p-2 px-4 md:hidden bg-gray-700 rounded text-3xl hover:bg-gray-400 hover:text-slate-700 w-min h-min right-[2%]' onClick={openUp}>=</button>)}
 
                     <div className="hidden w-full md:block md:w-auto">
-                        <ul className="nav-head">
+                        <div className="nav-head">
                             {links.map(v =>
-                            (
-                                <li key={v.uniq}>
-                                    <Link href={v.navHref}>
-                                        <a className='nav-icons'>{v.navName}</a>
-                                    </Link>
-                                </li>
-                            )
+                                (<TopNavItem navHref={v.navHref} navName={v.navName} key={v.uniq} />)
                             )}
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </nav >
@@ -66,18 +69,14 @@ function Navbar() {
                     unmountOnExit
                 >
 
-                    <ul className={isOpen ? 'nav-head' : 'hidden'}>
+
+                    <div className={isOpen ? 'nav-head' : 'hidden'}>
 
                         {links.map(v => (
-                            <>
-                                <li key={v.uniq} className='relative transition-all hover:right-2 hover:mt-2'>
-                                    <Link href={v.navHref}>
-                                        <a className='nav-icons px-3'>{v.navName}</a>
-                                    </Link>
-                                </li>
-                            </>
+                            <TopNavItem navHref={v.navHref} navName={v.navName} key={v.uniq} />
                         ))}
-                    </ul>
+
+                    </div>
 
                 </CSSTransition>
             </div>

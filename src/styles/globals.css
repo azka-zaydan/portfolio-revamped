@@ -29,7 +29,7 @@
 
 @layer components {
   .nav-icons {
-    @apply cursor-pointer block py-2 rounded md:border-0 md:p-0 text-gray-400 md:hover:text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent;
+    @apply cursor-pointer block p-2 rounded md:border-0 md:p-0 text-gray-400 md:hover:text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent;
   }
   .nav-head {
     @apply md:flex p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-gray-900 border-gray-700;

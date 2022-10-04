@@ -71,7 +71,7 @@ const Test: NextPage = () => {
             <Layout>
 
                 <div className="flex flex-col space-y-2 max-h-96 w-max overflow-auto p-4 bg-slate-200 rounded-lg text-center transition-all lg:flex-row lg:h-auto lg:w-auto mx-14 lg:space-x-2 shadow-2xl">
-                    <p className="">My Projects</p>
+                    <p className="lg:hidden">My Projects</p>
                     {
                         projs.map(v => (
                             <DescriptiveCard key={v.link} link={v.link} logo={v.logo} projLang={v.projLang} projName={v.projName} projectDetails={v.projectDetails} projImg={v.projImg} />

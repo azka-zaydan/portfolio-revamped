@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { ProjProps } from '../pages/about'
 import { ProjPropsFull } from '../pages/projects'
 
 const DescriptiveCard = ({ projName, link, logo, projLang, projectDetails, projImg }: ProjPropsFull) => {
@@ -8,10 +7,11 @@ const DescriptiveCard = ({ projName, link, logo, projLang, projectDetails, projI
 
 
     return (
-        <div className="block relative w-80 bg-gray-900 p-2 rounded-lg text-white">
-            <div className='flex m-2'>
-                <a href={link}>
-                    <img src={projImg} alt="img" className='w-[20rem]' />
+        <div className="block relative w-80 bg-gray-900 p-2 rounded-lg text-white transition-all lg:hover:bottom-4 lg:hover:shadow-4xl lg:hover:w-96 lg:hover:z-30">
+            <div className='flex m-2 '>
+
+                <a href={link} className=''>
+                    <img src={projImg} alt={projName} className='w-[20rem]' />
                 </a>
             </div>
             <div className='p-2 flex'>

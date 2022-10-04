@@ -10,6 +10,7 @@ export interface ProjProps {
     projLang: string
     link: string
     logo: string
+    projectDetails: string
 }
 
 
@@ -19,37 +20,43 @@ const About: NextPage = () => {
             projName: 'Bukalapak-Scraper',
             projLang: 'Python',
             link: 'https://github.com/azka1415/Bukalapak-Scraper',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg'
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+            projectDetails: ''
         },
         {
             projName: 'fastapi-mongo',
             projLang: 'Python',
             link: 'https://github.com/azka1415/fastapi-mongo',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg'
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+            projectDetails: ''
         },
         {
             projName: 'quiz-app-react',
             projLang: 'TypeScript',
             link: 'https://github.com/azka1415/quiz-app-react',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg'
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+            projectDetails: ''
         },
         {
             projName: 'netflix-clone',
             projLang: 'TypeScript',
             link: 'https://github.com/azka1415/netflix-clone',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg'
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+            projectDetails: ''
         },
         {
             projName: 'rest-ts',
             projLang: 'TypeScript',
             link: 'https://github.com/azka1415/rest-ts',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg'
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+            projectDetails: ''
         },
         {
             projName: 'fast-api',
             projLang: 'Python',
             link: 'https://github.com/azka1415/fast-api',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg'
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+            projectDetails: ''
         }
     ]
     return (
@@ -78,19 +85,7 @@ const About: NextPage = () => {
                     </div>
 
                 </div>
-                <div className='relative bg-slate-200 rounded-lg p-4 lg:p-8 transition-all ease-in-out md:text-xl lg:text-2xl shadow-2xl top-2 lg:top-0'
-                >
-                    <p>My Projects</p>
-                    {projs.map(v => (
-                        <ProjectCard
-                            key={v.link}
-                            link={v.link}
-                            logo={v.logo}
-                            projLang={v.projLang}
-                            projName={v.projName}
-                        />
-                    ))}
-                </div>
+
             </Layout>
         </>
     )

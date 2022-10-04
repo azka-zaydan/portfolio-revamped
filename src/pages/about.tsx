@@ -4,61 +4,9 @@ import { NextPage } from 'next'
 import React from 'react'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
-import ProjectCard from '../components/ProjectCard'
-export interface ProjProps {
-    projName: string
-    projLang: string
-    link: string
-    logo: string
-    projectDetails: string
-}
-
 
 const About: NextPage = () => {
-    const projs: ProjProps[] = [
-        {
-            projName: 'Bukalapak-Scraper',
-            projLang: 'Python',
-            link: 'https://github.com/azka1415/Bukalapak-Scraper',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
-            projectDetails: ''
-        },
-        {
-            projName: 'fastapi-mongo',
-            projLang: 'Python',
-            link: 'https://github.com/azka1415/fastapi-mongo',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
-            projectDetails: ''
-        },
-        {
-            projName: 'quiz-app-react',
-            projLang: 'TypeScript',
-            link: 'https://github.com/azka1415/quiz-app-react',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
-            projectDetails: ''
-        },
-        {
-            projName: 'netflix-clone',
-            projLang: 'TypeScript',
-            link: 'https://github.com/azka1415/netflix-clone',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
-            projectDetails: ''
-        },
-        {
-            projName: 'rest-ts',
-            projLang: 'TypeScript',
-            link: 'https://github.com/azka1415/rest-ts',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
-            projectDetails: ''
-        },
-        {
-            projName: 'fast-api',
-            projLang: 'Python',
-            link: 'https://github.com/azka1415/fast-api',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
-            projectDetails: ''
-        }
-    ]
+
     return (
         <>
             <Header titleName='About' />

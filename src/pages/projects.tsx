@@ -1,5 +1,6 @@
 import { NextPage } from "next"
 import DescriptiveCard from "../components/DescriptiveCard"
+import Header from "../components/Header"
 import Layout from "../components/Layout"
 
 export interface ProjPropsFull {
@@ -65,17 +66,20 @@ const Test: NextPage = () => {
     ]
 
     return (
-        <Layout>
+        <>
+            <Header titleName="Projects" />
+            <Layout>
 
-            <div className="flex flex-col space-y-2 max-h-96 w-max overflow-auto p-4 bg-slate-200 rounded-lg text-center transition-all lg:flex-row lg:h-auto lg:w-auto mx-14 lg:space-x-2 shadow-2xl">
-                <p className="">My Projects</p>
-                {
-                    projs.map(v => (
-                        <DescriptiveCard key={v.link} link={v.link} logo={v.logo} projLang={v.projLang} projName={v.projName} projectDetails={v.projectDetails} projImg={v.projImg} />
-                    ))
-                }
-            </div>
-        </Layout>
+                <div className="flex flex-col space-y-2 max-h-96 w-max overflow-auto p-4 bg-slate-200 rounded-lg text-center transition-all lg:flex-row lg:h-auto lg:w-auto mx-14 lg:space-x-2 shadow-2xl">
+                    <p className="">My Projects</p>
+                    {
+                        projs.map(v => (
+                            <DescriptiveCard key={v.link} link={v.link} logo={v.logo} projLang={v.projLang} projName={v.projName} projectDetails={v.projectDetails} projImg={v.projImg} />
+                        ))
+                    }
+                </div>
+            </Layout>
+        </>
     )
 }
 

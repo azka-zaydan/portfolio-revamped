@@ -13,7 +13,7 @@
     @apply bg-none text-black;
   }
   .nav-icons-dark {
-    @apply bg-none text-white;
+    @apply bg-none text-white hover:text-slate-600;
   }
   .dark-mode {
     @apply bg-gray-800 text-white;

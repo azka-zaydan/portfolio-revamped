@@ -69,8 +69,8 @@ function Navbar() {
                             {links.map(v =>
                                 (<TopNavItem navHref={v.navHref} navName={v.navName} key={v.uniq} />)
                             )}
-                            {currentTheme === 'light-mode' ? (<button className='nav-icons' onClick={() => setTheme('dark-mode')}>Dark</button>) :
-                                (<button className='nav-icons' onClick={() => setTheme('light-mode')}>Light</button>)
+                            {currentTheme === 'light-mode' ? (<button className='nav-icons nav-icons-light' onClick={() => setTheme('dark-mode')}>Dark</button>) :
+                                (<button className='nav-icons nav-icons-dark' onClick={() => setTheme('light-mode')}>Light</button>)
                             }
                         </div>
                     </div>

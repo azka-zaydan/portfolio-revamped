@@ -18,9 +18,8 @@ const Home: NextPage = () => {
             <code>
               Software Engineer
             </code>
-            {/* what i do */}
-            <div className={`${currentTheme} flex lg:block w-max p-2 rounded-lg content-center m-auto`}>
-              Python and React Fullstack Developer
+            <div className={`${currentTheme} flex lg:block w-max rounded-lg content-center m-auto`}>
+              <b> Python and React Fullstack Developer </b>
             </div>
 
           </section>

@@ -55,6 +55,12 @@ function Navbar() {
                             }
                         </button>
                     </Link>
+                    <div className='md:hidden absolute w-max h-max right-[20%]'>
+                        {currentTheme === 'light-mode' ? (<button className={`nav-icons nav-icons-light`} onClick={() => setTheme('dark-mode')}>Dark</button>) :
+                            (<button className={`nav-icons nav-icons-dark`} onClick={() => setTheme('light-mode')}>Light</button>)
+                        }
+
+                    </div>
                     {isOpen ? (
                         <button onClick={closeIt} className={`absolute p-2 px-4 md:hidden ${currentTheme} rounded text-3xl hover:bg-gray-400 hover:text-slate-700 w-min h-min right-[2%]`}
                         >
@@ -69,6 +75,9 @@ function Navbar() {
                             {links.map(v =>
                                 (<TopNavItem navHref={v.navHref} navName={v.navName} key={v.uniq} />)
                             )}
+                            <div className={`w-[0.1rem] h-4 mt-1 ${currentTheme === 'light-mode' ? 'bg-gray-700' : 'bg-slate-200'}`} >
+
+                            </div>
                             {currentTheme === 'light-mode' ? (<button className='nav-icons nav-icons-light' onClick={() => setTheme('dark-mode')}>Dark</button>) :
                                 (<button className='nav-icons nav-icons-dark' onClick={() => setTheme('light-mode')}>Light</button>)
                             }
@@ -88,9 +97,7 @@ function Navbar() {
                     {links.map(v => (
                         <TopNavItem navHref={v.navHref} navName={v.navName} key={v.uniq} />
                     ))}
-                    {currentTheme === 'light-mode' ? (<button className={`nav-icons nav-icons-light`} onClick={() => setTheme('dark-mode')}>Dark</button>) :
-                        (<button className={`nav-icons nav-icons-dark`} onClick={() => setTheme('light-mode')}>Light</button>)
-                    }
+
                 </div>
 
             </div>

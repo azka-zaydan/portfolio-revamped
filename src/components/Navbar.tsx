@@ -31,15 +31,16 @@ function Navbar() {
             uniq: 2
         },
         {
-            navName: 'Contact',
-            navHref: '/contact',
+            navName: 'Projects',
+            navHref: '/projects',
             uniq: 3
         },
         {
-            navName: 'Projects',
-            navHref: '/projects',
+            navName: 'Contact',
+            navHref: '/contact',
             uniq: 4
-        }
+        },
+
     ]
 
     return (

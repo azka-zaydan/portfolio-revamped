@@ -57,11 +57,11 @@ const Test: NextPage = () => {
             projImg: 'https://miro.medium.com/max/720/1*1reV249DP4NRz3QzRyFIHQ.png',
         },
         {
-            projName: 'fast-api',
-            projLang: 'Python',
-            link: 'https://github.com/azka1415/fast-api',
-            logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
-            projectDetails: 'RestAPI made with FastAPI and MySQL',
+            projName: 'Portfolio Site',
+            projLang: 'TypeScript',
+            link: 'https://github.com/azka1415/portfolio-revamped',
+            logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+            projectDetails: 'My Portfolio Site',
             projImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzsYQqgSiCpOpsY83Juj2kUSoi25392L2vgA&usqp=CAU',
         }
     ]

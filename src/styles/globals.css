@@ -2,36 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-.menu-enter {
-  opacity: 0;
-  transform: scale(1) translateX(10px);
-}
-.menu-enter-active {
-  opacity: 1;
-  transform: translate(0px);
-  transition: opacity 500ms, transform 500ms;
-}
-.menu-exit {
-  opacity: 0;
-}
-.menu-exit-active {
-  opacity: 1;
-  transform: scale(1) translateX(-10px);
-  transition: opacity 500ms, transform 500ms;
-}
-
-.inset-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 @layer components {
   .nav-icons {
-    @apply cursor-pointer block p-2 rounded md:border-0 md:p-0 text-gray-400 md:hover:text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent;
+    @apply cursor-pointer block p-2 rounded md:border-0 md:p-0 md:hover:text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent;
   }
   .nav-head {
-    @apply md:flex p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-gray-900 border-gray-700;
+    @apply md:flex p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 shadow-2xl md:shadow-none;
+  }
+  .nav-icons-light {
+    @apply bg-none text-black;
+  }
+  .nav-icons-dark {
+    @apply bg-none text-white;
+  }
+  .dark-mode {
+    @apply bg-gray-800 text-white;
+  }
+  .light-mode {
+    @apply bg-slate-300 text-black;
   }
 }

@@ -3,12 +3,16 @@ import type { AppType } from "next/dist/shared/lib/utils";
 import Navbar from "../components/Navbar";
 import { withTRPC } from "@trpc/next";
 import { AppRouter } from "./api/trpc/[trpc]";
+import ThemeContextProvider from "../context/ThemeContext";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  return (<>
-    <Navbar />
-    <Component {...pageProps} />
-  </>
+  return (
+    <>
+      <ThemeContextProvider>
+        <Navbar />
+        <Component {...pageProps} />
+      </ThemeContextProvider>
+    </>
   );
 };
 

@@ -2,13 +2,15 @@
 import type { NextPage } from "next";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
+import { useThemeContext } from "../context/ThemeContext";
 const Home: NextPage = () => {
+  const { currentTheme, setTheme } = useThemeContext()
   return (
     <>
       <Header titleName="Home" />
       <Layout>
         <div
-          className="flex lg:text-start m-auto shadow-xl p-4 bg-slate-200 rounded-lg transition-all ease-in-out md:p-10 md:text-2xl lg:p-16 lg:mx-20 lg:text-4xl"
+          className={`flex ${currentTheme} lg:text-start m-auto shadow-2xl p-4 bg-inherit rounded-lg transition-all ease-in-out md:p-10 md:text-2xl lg:p-16 lg:mx-20 lg:text-4xl`}
         >
           <section>
             <h1 className="text-2xl md:text-4xl lg:text-6xl">Hi, i'm Azka</h1>
@@ -17,7 +19,7 @@ const Home: NextPage = () => {
               Software Engineer
             </code>
             {/* what i do */}
-            <div className="flex lg:block bg-gray-900 w-max p-2 rounded-lg text-white content-center m-auto">
+            <div className={`${currentTheme} flex lg:block w-max p-2 rounded-lg content-center m-auto`}>
               Python and React Fullstack Developer
             </div>
 

@@ -2,6 +2,7 @@ import { NextPage } from "next"
 import DescriptiveCard from "../components/DescriptiveCard"
 import Header from "../components/Header"
 import Layout from "../components/Layout"
+import { useThemeContext } from "../context/ThemeContext"
 
 export interface ProjPropsFull {
     projName: string
@@ -13,7 +14,7 @@ export interface ProjPropsFull {
 }
 
 const Test: NextPage = () => {
-
+    const { currentTheme } = useThemeContext()
     const projs: ProjPropsFull[] = [
         {
             projName: 'Bukalapak-Scraper',
@@ -70,8 +71,8 @@ const Test: NextPage = () => {
             <Header titleName="Projects" />
             <Layout>
 
-                <div className="flex flex-col space-y-2 max-h-96 w-max overflow-auto p-4 bg-slate-200 rounded-lg text-center transition-all lg:flex-row lg:h-auto lg:w-auto mx-14 lg:space-x-2 shadow-2xl
-                lg:bg-inherit">
+                <div className={`flex flex-col space-y-2 max-h-96 w-max overflow-auto p-4 ${currentTheme} rounded-lg text-center transition-all lg:flex-row lg:h-auto lg:w-auto mx-14 lg:space-x-2 shadow-2xl bg-inherit`}
+                >
                     <p className="lg:hidden">My Projects</p>
                     {
                         projs.map(v => (

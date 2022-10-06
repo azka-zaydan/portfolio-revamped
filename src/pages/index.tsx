@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Layout from "../components/Layout";
 import { useThemeContext } from "../context/ThemeContext";
 const Home: NextPage = () => {
-  const { currentTheme, setTheme } = useThemeContext()
+  const { currentTheme } = useThemeContext()
   return (
     <>
       <Header titleName="Home" />

@@ -45,7 +45,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className={`md:px-2 px-4 py-2.5 ${currentTheme} fixed w-full z-50 border shadow-xl dark:border-none`}>
+            <nav className={`md:px-2 px-4 py-2.5 ${currentTheme} fixed w-full z-50 border-none shadow-xl`}>
                 <div className="transition-all ease-in-out container flex flex-wrap justify-between items-center mx-auto">
                     <Link href={'/'}>
                         <button className="space-x-2 p-2"

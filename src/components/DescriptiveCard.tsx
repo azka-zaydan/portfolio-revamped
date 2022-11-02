@@ -9,7 +9,7 @@ const DescriptiveCard = ({ projName, link, projectDetails, projImg }: ProjPropsF
     const { currentTheme } = useThemeContext()
 
     return (
-        <div className="block relative w-80  p-2 rounded-lg transition-all lg:hover:bottom-4 shadow-4xl lg:hover:w-96 lg:hover:z-30">
+        <div className="block relative w-80 p-2 rounded-lg transition-all lg:hover:bottom-4 shadow-4xl lg:p-6 lg:hover:w-96 lg:hover:z-30">
             <div className='flex m-2'>
                 <a href={link}>
                     <img src={projImg} alt={projName} className='w-[20rem]' />

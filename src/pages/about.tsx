@@ -8,6 +8,7 @@ import { useThemeContext } from '../context/ThemeContext'
 
 const About: NextPage = () => {
     const { currentTheme } = useThemeContext()
+
     return (
         <>
             <Header titleName='About' />
@@ -18,7 +19,7 @@ const About: NextPage = () => {
                     className={`flex md:block bg-inherit ${currentTheme} rounded-lg mx-2 p-2 md:p-4 lg:p-8 transition-all ease-in-out md:text-xl lg:text-2xl shadow-2xl`}
                 >
                     <div className='lg:text-start text-center'>
-                        
+
 
                         <p>I'm <b> Azka Rafif Zaydan </b></p>
                         <p className=''><code className=''>Software Engineer</code> from Jakarta, Indonesia</p>
